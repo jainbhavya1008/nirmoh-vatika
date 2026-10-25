@@ -68,11 +68,13 @@ main{padding:2rem 1rem}.wide{max-width:var(--width);margin:0 auto}.narrow{max-wi
 .band{background:var(--cream);padding:3rem 1rem;margin:-2rem -1rem 0}
 .intro{max-width:1000px;margin:0 auto;display:grid;gap:2rem;align-items:center}@media(min-width:800px){.intro{grid-template-columns:2fr 3fr}}
 .intro img{border:2px solid var(--gold);border-radius:8px;width:100%}
-.rosary-in{background:var(--cream);border:2px solid rgba(200,146,42,.6);border-radius:14px;padding:1.5rem;max-width:1000px;margin:0 auto}
-.rosary-in h1,.rosary-in h2{text-align:center;font-size:2.2rem;margin-bottom:1.5rem}
-.rosary-grid{display:grid;gap:2rem;align-items:center}@media(min-width:800px){.rosary-grid{grid-template-columns:3fr 2fr}}
-.rosary-grid figure{margin:0}.rosary-grid img{border:1px solid rgba(200,146,42,.5);border-radius:8px;background:#fff;display:block;margin:auto;max-width:380px}
-.jewels{color:var(--bark);font-weight:500}
+.rosary-in{background:var(--cream);border:2px solid rgba(200,146,42,.6);border-radius:14px;padding:1.5rem;max-width:1000px;min-width:0;margin:0 auto}
+.rosary-in h1,.rosary-in h2{text-align:center;font-size:clamp(1.85rem,4vw,2.2rem);overflow-wrap:anywhere;margin-bottom:1.5rem}
+.rosary-grid{display:grid;gap:2rem;align-items:center;min-width:0}.rosary-grid>*{min-width:0}
+@media(min-width:800px){.rosary-grid{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}}
+.rosary-grid .prose{min-width:0;overflow-wrap:anywhere}.rosary-grid figure{width:100%;min-width:0;margin:0}.rosary-grid img{width:min(100%,380px);height:auto;border:1px solid rgba(200,146,42,.5);border-radius:8px;background:#fff;display:block;margin:auto}
+.jewels{padding-inline-start:1.5rem;color:var(--bark);font-weight:500}
+@media(max-width:799px){.rosary-in{padding:1rem}.rosary-in h1,.rosary-in h2{margin-bottom:1rem}.rosary-grid{gap:1.25rem}.rosary-grid figure{padding-block:.25rem}.rosary-grid .prose{max-width:none}.rosary-grid p,.rosary-grid li{overflow-wrap:anywhere}}
 .code{font:700 4rem var(--font-head);color:var(--gold);margin:0}
 
 /* ----- PDF reader ----- */
