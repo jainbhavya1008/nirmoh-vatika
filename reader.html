@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reader – Nirmoh Vatika</title>
+<meta name="description" content="Read a Nirmoh Vatika PDF online.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFBF0">
+<meta property="og:title" content="Reader – Nirmoh Vatika">
+<meta property="og:description" content="Read a Nirmoh Vatika PDF online.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Mukta:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="books" data-seo-path="/reader.html" data-indexable="false">
+<a class="skip" href="#main">Skip to content</a>
+<header id="site-header"></header>
+<noscript><p class="message">Please turn on JavaScript to see the menu and the list of books.</p></noscript>
+<main id="main">
+<div class="wide">
+<p><a id="back" href="index.html#books">← Jain Books</a></p>
+<h1 id="title">Loading…</h1><p id="desc" class="muted prose"></p>
+<div class="reader">
+<div class="toolbar" id="toolbar" role="toolbar" aria-label="PDF controls">
+<button class="btn" id="prev" aria-label="Previous page">‹</button>
+<span class="pageinfo"><label class="sr" for="page">Page</label><input id="page" class="pagebox" inputmode="numeric" value="1"> / <span id="total">–</span></span>
+<button class="btn" id="next" aria-label="Next page">›</button>
+<button class="btn" id="zout" aria-label="Zoom out">−</button><span id="zoom" class="zoom">100%</span><button class="btn" id="zin" aria-label="Zoom in">+</button>
+<button class="btn" id="fitw">Fit width</button><button class="btn" id="fitp">Fit page</button>
+<a class="btn btn-primary" id="download" href="#" download hidden>Download PDF</a>
+</div>
+<p class="status" id="status" role="status">Loading…</p>
+<div class="canvaswrap" id="wrap"><canvas id="canvas" aria-label="PDF page"></canvas></div>
+</div></div>
+</main>
+<footer id="site-footer">Nirmoh Vatika</footer>
+<script src="assets/js/layout.js"></script>
+<script src="content-data.js"></script>
+<script src="assets/vendor/pdfjs/pdf.min.js"></script>
+<script src="assets/js/reader.js"></script>
+<script src="site-config.js"></script><script src="assets/js/seo.js"></script>
+</body>
+</html>

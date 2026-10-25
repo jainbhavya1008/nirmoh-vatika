@@ -1,0 +1,90 @@
+/* ===== NIRMOH VATIKA: MAIN STYLESHEET =====
+   Change colours/fonts here (top of file). Everything else uses these values. */
+:root{
+  --ivory:#FFFBF0;      /* page background */
+  --cream:#FFF3D6;      /* soft panels */
+  --beige:#EFE3C8;      /* thin borders */
+  --ink:#3A2410;        /* main text (dark brown) */
+  --bark:#6B3E14;       /* headings, links */
+  --gold:#C8922A;       /* accents */
+  --saffron:#E39B1B;    /* main buttons */
+  --red:#8a2a1a;        /* error text */
+  --font-body:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;
+  --font-head:"Cormorant Garamond","Noto Sans Devanagari",Georgia,serif;
+  --width:1100px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h,56px) + 8px)}
+body{margin:0;background:var(--ivory);color:var(--ink);font:17px/1.65 var(--font-body)}
+h1,h2,h3{font-family:var(--font-head);color:var(--bark);line-height:1.15;margin:.2em 0 .5em}
+h1{font-size:2.6rem}h2{font-size:1.9rem}h3{font-size:1.5rem}
+a{color:var(--bark)}img{max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.skip{position:absolute;left:-999px;background:#fff;padding:.5rem}.skip:focus{left:.5rem;top:.5rem;z-index:50}
+main{padding:2rem 1rem}.wide{max-width:var(--width);margin:0 auto}.narrow{max-width:780px;margin:0 auto}
+.center{text-align:center}.muted{color:rgba(58,36,16,.68)}.small{font-size:.9rem}
+.prose{max-width:68ch}.prose p{margin:.85em 0}
+
+/* ----- header (edit the HTML in assets/js/layout.js) ----- */
+.site-header{background:var(--ivory)}
+.masthead{max-width:var(--width);margin:0 auto;padding:1rem;display:grid;grid-template-columns:auto 1fr auto;gap:.75rem;align-items:center}
+.guru{margin:0;text-align:center}
+.guru img{width:84px;height:84px;border-radius:50%;border:2px solid var(--gold);object-fit:cover;display:block;margin:auto}
+.guru figcaption{display:none;font:600 .95rem/1.2 var(--font-head);color:var(--bark);max-width:10rem;margin:.3rem auto 0}
+.brand{text-align:center}
+.brand a{font:700 2.3rem/1 var(--font-head);color:var(--bark);text-decoration:none}
+.brand p{margin:.3rem 0 0;font-size:.9rem;color:rgba(58,36,16,.7)}
+.nav{background:#fff;border-top:1px solid var(--beige);border-bottom:4px double var(--gold);position:sticky;top:0;z-index:30}
+.nav ul{list-style:none;margin:0 auto;padding:0 1rem .5rem;display:none;flex-wrap:wrap;justify-content:center;max-width:var(--width)}
+.nav ul.open{display:flex;flex-direction:column}
+.nav a,.nav-toggle{display:block;padding:.55rem .75rem;color:var(--ink);text-decoration:none;font-size:.95rem;border-radius:4px;background:none;border:0;font-family:inherit;cursor:pointer}
+.nav a:hover{background:var(--cream)}.nav a[aria-current="page"]{font-weight:700;color:var(--bark);box-shadow:inset 0 -2px 0 var(--gold)}
+.nav-toggle{margin:0 auto;font-weight:600}
+@media(min-width:900px){.guru img{width:112px;height:112px}.guru figcaption{display:block}.brand a{font-size:3.5rem}.nav-toggle{display:none}.nav ul{display:flex!important;flex-direction:row;padding-bottom:0}}
+
+/* ----- buttons, cards, forms ----- */
+.btn{display:inline-block;padding:.5rem 1rem;border:1px solid var(--gold);border-radius:6px;font:500 .95rem var(--font-body);text-decoration:none;cursor:pointer;background:#fff;color:var(--bark);line-height:1.3}
+.btn:hover{background:var(--cream)}.btn-primary{background:var(--saffron);border-color:var(--saffron);color:#fff}.btn-primary:hover{background:var(--gold)}.btn[disabled]{opacity:.55}
+.card{background:#fff;border:1px solid var(--beige);border-radius:8px;padding:1.2rem;margin:0}
+.input{width:100%;padding:.55rem .7rem;border:1px solid #d9c9a6;border-radius:6px;background:#fff;color:var(--ink);font:inherit}
+.search{display:flex;gap:.5rem;margin:1rem 0 1.5rem}.search[hidden]{display:none}.search label{margin:0}
+.message{background:#fff;border:1px solid var(--beige);border-radius:8px;padding:1.2rem;text-align:center}
+.message.error{border-color:#e3b4a9;background:#fbeae6;color:var(--red)}
+.grid{list-style:none;padding:0;margin:0;display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.book{display:flex;flex-direction:column}
+.cover{aspect-ratio:3/4;background:var(--cream);display:flex;align-items:center;justify-content:center;border-radius:4px;overflow:hidden;margin-bottom:.8rem;color:var(--gold);font-size:3rem}
+.cover img{width:100%;height:100%;object-fit:contain}
+.book h3{font-size:1.45rem;margin-bottom:.2em}.book p{margin:.3rem 0}
+.meta{font-size:.9rem;color:rgba(58,36,16,.7)}
+.actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:auto;padding-top:.9rem}
+.cards3{display:grid;gap:1rem;margin:2.5rem auto 0;max-width:var(--width)}@media(min-width:800px){.cards3{grid-template-columns:repeat(4,1fr)}}
+.linkcard{text-decoration:none;color:var(--ink);display:block}.linkcard:hover{border-color:var(--gold)}.linkcard h3{font-size:1.4rem}.linkcard p{margin:.2rem 0;font-size:.95rem}
+
+/* ----- sections of the single-page home ----- */
+.section{max-width:var(--width);margin:0 auto;padding-top:3.5rem}
+
+/* ----- introduction & rosary ----- */
+.band{background:var(--cream);padding:3rem 1rem;margin:-2rem -1rem 0}
+.intro{max-width:1000px;margin:0 auto;display:grid;gap:2rem;align-items:center}@media(min-width:800px){.intro{grid-template-columns:2fr 3fr}}
+.intro img{border:2px solid var(--gold);border-radius:8px;width:100%}
+.rosary-in{background:var(--cream);border:2px solid rgba(200,146,42,.6);border-radius:14px;padding:1.5rem;max-width:1000px;margin:0 auto}
+.rosary-in h1,.rosary-in h2{text-align:center;font-size:2.2rem;margin-bottom:1.5rem}
+.rosary-grid{display:grid;gap:2rem;align-items:center}@media(min-width:800px){.rosary-grid{grid-template-columns:3fr 2fr}}
+.rosary-grid figure{margin:0}.rosary-grid img{border:1px solid rgba(200,146,42,.5);border-radius:8px;background:#fff;display:block;margin:auto;max-width:380px}
+.jewels{color:var(--bark);font-weight:500}
+.code{font:700 4rem var(--font-head);color:var(--gold);margin:0}
+
+/* ----- PDF reader ----- */
+.reader{border:1px solid var(--beige);border-radius:8px;background:#fff;margin-top:1rem}
+.toolbar{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;justify-content:center;padding:.6rem;border-bottom:1px solid var(--beige);position:sticky;top:0;background:#fff;z-index:5}
+.pagebox{width:3.2rem;padding:.35rem;border:1px solid #d9c9a6;border-radius:6px;text-align:center;font:inherit}
+.pageinfo{display:inline-flex;gap:.3rem;align-items:center}.zoom{min-width:3.2rem;text-align:center;font-size:.9rem}
+.canvaswrap{overflow:auto;background:var(--beige);padding:.75rem;text-align:center;min-height:240px}
+.canvaswrap canvas{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.2);max-width:none}
+.status{margin:0;padding:.7rem 1rem;text-align:center}.status.error{color:var(--red)}.status:empty{display:none}
+
+/* ----- footer ----- */
+.site-footer{text-align:center;margin-top:4rem;padding:2rem 1rem;background:var(--cream);border-top:2px solid rgba(200,146,42,.6);font-size:.95rem}.site-footer a{margin-left:1rem}.analytics-notice{position:fixed;right:1rem;bottom:1rem;z-index:60;max-width:26rem;padding:1rem;background:#fff;border:1px solid var(--beige);border-radius:8px;box-shadow:0 3px 16px rgba(58,36,16,.2)}.analytics-notice p{margin:.1rem 0 .75rem}.analytics-notice .btn+.btn{margin-left:.5rem}
+@media print{.site-header,.nav,.site-footer,.toolbar{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
